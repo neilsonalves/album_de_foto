@@ -6,11 +6,14 @@ class Contador extends Component {
         fontSize: 40,
         fontWeight: "normal"
     }
-
+    
     render() {
+        let classes = "badge m-2 badge-";
+        classes += (this.state.contador > 10 ? "success" : "primary");
+
         return(
             <React.Fragment>
-                <span style={this.estilos} className="badge badge-primary m-2">{this.formataContador()}</span>
+                <span style={this.estilos} className={classes}>{this.formataContador()}</span>
                 <button className="btn btn-secondary" onClick={this.tratarIncremento}>Incrementar</button>
             </React.Fragment>
         );
