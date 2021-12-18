@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// meus compomentes 
+import Mensagem from './components/mensagem';
 
-const element = <h1> titulo </h1>;
-
+//const element = <h1> titulo </h1>;
 //console.log(element);
 ReactDOM.render(
-    element,
+    <Mensagem/>,
     document.getElementById('root')
 );
