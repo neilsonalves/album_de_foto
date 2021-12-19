@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 
 class Contador extends Component {
-    state = {contador: 0};//declarando um contador
+    state = {contador: 0, itens: ['item1', 'item2', 'item3']};
     estilos = {
         fontSize: 40,
         fontWeight: "normal"
@@ -15,6 +15,9 @@ class Contador extends Component {
             <React.Fragment>
                 <span style={this.estilos} className={classes}>{this.formataContador()}</span>
                 <button className="btn btn-secondary" onClick={this.tratarIncremento}>Incrementar</button>
+                <ul>
+                    {this.state.itens.map(item => <li key={item}>{item}</li>)}
+                </ul>
             </React.Fragment>
         );
     }
